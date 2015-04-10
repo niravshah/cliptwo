@@ -1,0 +1,35 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title" class="page-title-center">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h1 class="mainTitle" translate="sidebar.nav.pipeline.MAIN">{{ mainTitle }}</h1>
+            <span class="mainDescription">Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.</span>
+            <input ng-model="search" class="form-control text-center margin-top-15" type="text" placeholder="Search Pipelines...">
+        </div>
+    </div>
+</section>
+
+<!-- end: PAGE TITLE -->
+<!-- start: YOUR CONTENT HERE -->
+<!-- end: YOUR CONTENT HERE -->
+<!-- start: COLORED PANELS -->
+<div ng-controller="PipelineCtrl" ng-init="initPipelines()">
+    <div class="container-fluid container-fullw bg-white">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="margin-top-15">
+                    <nav id="cl-effect-2" class="links cl-effect-2">
+                        <a ui-sref=".details({id:pipeline.id})" ng-repeat="pipeline in pipelines | filter: search" href><span data-hover="{{pipeline.name}}">{{pipeline.name}}</span></a>
+                    </nav>
+                </div>
+                <div>
+                    <nav id="cl-effect-1" class="links cl-effect-3">
+                        <a ui-sref=".new" href><h6>Create New Pipeline</h6></a>						
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div ui-view></div>  
+</div>
+<!-- end: COLORED PANELS -->

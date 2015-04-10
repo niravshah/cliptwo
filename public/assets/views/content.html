@@ -1,0 +1,50 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title" class="page-title-center">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h1 class="mainTitle" translate="sidebar.nav.content.MAIN">{{ mainTitle }}</h1>
+            <span class="mainDescription">Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.</span>
+        </div>
+    </div>
+</section>
+<!-- end: PAGE TITLE -->
+<!-- start: YOUR CONTENT HERE -->
+<!-- end: YOUR CONTENT HERE -->
+<div ng-controller="contentCtrl" ng-init="init()">
+    <div class="container-fluid container-fullw bg-white">
+        <div class="row">
+            <div class="col-md-12">
+                <tabset class="tabbable">
+                    <tab heading="Curate">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="url" value="http://www.marketplace.org/topics/education/learning-curve/american-students-head-germany-free-college" placeholder="Enter the URL/address of the article you'd like to share..." ng-model="inputUrl">
+                                    <span class="input-group-btn">
+										<button type="button" class="btn btn-primary" ng-click="embget(inputUrl)">
+										<i class="fa fa-magic"></i>
+										Get Article !
+										</button> 
+									</span>	
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin-top-20">
+                            <div class="col-md-4" ng-repeat="article in resolvedUrls">
+                                <div class="thumbnail">
+                                    <img ng-src="{{article.images[0].url}}" alt="" />
+                                    <div class="caption">
+                                        <h5 class="text-bold margin-bottom-10"><a href="{{article.url}}"></a>{{article.title}}</h5>
+                                        <p>{{article.description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+                    <tab heading="Create">
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+    </div>
+</div>

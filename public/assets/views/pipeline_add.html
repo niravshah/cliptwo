@@ -1,0 +1,103 @@
+<div class="row margin-top-15 margin-bottom-15">
+    <div class="col-lg-1 col-md-0"></div>
+    <div class="col-lg-10 col-md-12">
+        <div class="panel panel-white" id="panel4" ng-model="pipelines">
+            <div class="panel-heading">
+                <h5 class="panel-title">Add New Prospect</h5>
+                <ct-paneltool class="panel-tools" tool-collapse="tool-collapse"></ct-paneltool>
+            </div>
+            <div collapse="panel4" ng-init="panel4=false" class="panel-wrapper">
+                <!--div class="panel-body" ng-controller="PipelineCtrl"-->
+				<div class="panel-body">
+                    <form name="addProspectForm" role="form">
+                        <div class="row form-group">
+                            <div class="col-lg-6">
+                                <input type="email" class="form-control" id="newProspectEmail" placeholder="Enter Email" ng-model="myModel.email">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="newProspectName" placeholder="Enter Name" ng-model="myModel.name">
+                            </div>
+                        </div>
+                        <div class="row margin-top-20 form-group">
+                            <div class="col-lg-3" align="left">
+                                <h5>Motivation Factors: </h5>	
+                            </div>
+                            <div class="col-lg-1" align="left">
+                                <a ng-click="myModel.org = !myModel.org" data-toggle="tooltip" title="Better Team/Culture/Organization" href target="lightbulb" ct-toggle="toggle">
+                                    <p class="text-center med-icon" active-class="text-primary" id="lightbulb" style="color:grey;" toggleable ng-model="myModel.culture">
+                                        <i class="fa fa-users"></i>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-lg-1" align="left">
+                                <a ng-click="myModel.career = !myModel.career" data-toggle="tooltip" title="Better Career Prospects" href target="lightbulb3" ct-toggle="toggle">
+                                    <p class="text-center med-icon" active-class="text-primary" id="lightbulb3" style="color:grey;" toggleable>
+                                        <i class="fa fa-line-chart"></i>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-lg-1" align="left">
+                                <a ng-click="myModel.challenge = !myModel.challenge" data-toggle="tooltip" title="More Challenging Work" href target="lightbulb4" ct-toggle="toggle">
+                                    <p class="text-center med-icon" active-class="text-primary" id="lightbulb4" style="color:grey;" toggleable>
+                                        <i class="fa fa-bolt"></i>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-lg-1" align="left">
+                                <a ng-click="myModel.comp = !myModel.comp" data-toggle="tooltip" title="Better Compensation" href target="lightbulb2" ct-toggle="toggle">
+                                    <p class="text-center med-icon" active-class="text-primary" id="lightbulb2" style="color:grey;" toggleable>
+                                        <i class="fa fa-gbp"></i>										
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-lg-5" align="left">
+                                <span class="help-block"><i class="ti-info-alt text-primary"></i> A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                            </div>
+                        </div>
+                        <div class="row margin-top-20 form-group">
+                            <div class="col-lg-3" align="left">
+                                <h5>Career Spectrum: </h5>	
+                            </div>
+                            <div class="col-lg-9" align="left">
+                                <div>
+                                    <div class="btn-group">
+                                        <label class="btn btn-sm btn-light-yellow btn-o" ng-model="myModel.cmove" btn-checkbox>
+                                            Cant Move
+                                        </label>
+                                        <label class="btn btn-sm btn-light-yellow btn-o" ng-model="myModel.wmove" btn-checkbox>
+                                            Wont Move
+                                        </label>
+                                        <label class="btn btn-sm btn-dark-yellow btn-o" ng-model="myModel.ambitious" btn-checkbox>
+                                            Ambitious
+                                        </label>
+                                        <label class="btn btn-sm btn-dark-yellow btn-o" ng-model="myModel.accomplished" btn-checkbox>
+                                            Accomplished
+                                        </label>
+                                        <label class="btn btn-sm btn-dark-yellow btn-o" ng-model="myModel.frustrated" btn-checkbox>
+                                            Frustrated
+                                        </label>
+                                        <label class="btn btn-sm btn-dark-yellow btn-o" ng-model="myModel.fated" btn-checkbox>
+                                            Fated
+                                        </label>
+                                        <label class="btn btn-sm btn-light-yellow btn-o" ng-model="myModel.active" btn-checkbox>
+                                            Active
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button ng-click="addProspect($stateParams.id,myModel);" type="submit" class="btn btn-o btn-primary">
+                                Submit
+                            </button>
+                            <button ng-click="reset(addProspectForm)" type="reset" class="btn btn-o btn-primary">
+                                Reset
+                            </button>							
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-1 col-md-0"></div>
+</div>
