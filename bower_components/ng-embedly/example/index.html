@@ -1,0 +1,15 @@
+<html ng-app="example">
+    <head>
+        <title>ng-embedly</title>
+
+        <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="../ng-embedly.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body ng-controller="ExampleCtrl">
+        <div class="container" style="width:400px;margin:auto;">
+            {{ url_to_oembed }}
+            <ng-embedly href="url_to_oembed"></ng-embedly>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "ng-embedly",
+  "version": "0.1.1",
+  "authors": [
+    "Paul Joannon <hello@pauljoannon.com>"
+  ],
+  "license": "LGPL3",
+  "main": "ng-embedly.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Paulloz/ng-embedly.git"
+  },
+  "homepage": "https://github.com/Paulloz/ng-embedly",
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.1",
+    "commit": "79670db5e61c92d8577d3d6a3b7a3cbc0b0a69e2"
+  },
+  "_source": "git://github.com/Paulloz/ng-embedly.git",
+  "_target": "~0.1.1",
+  "_originalSource": "ng-embedly",
+  "_direct": true
+}
