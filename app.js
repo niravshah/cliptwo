@@ -31,6 +31,10 @@ app.use('/users', users);
 app.use('/api', jwt({
     secret: jwtTokenSecret
 }), api);
+app.all('/login*', function(req, res) {
+    res.render('index');
+});
+
 /*app.all('/app*', function(req, res) {
     res.render('index');
 });*/

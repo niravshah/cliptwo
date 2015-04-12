@@ -33,7 +33,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
         // APPLICATION ROUTES
         // -----------------------------------
         // For any unmatched url, redirect to /app/dashboard
-        $urlRouterProvider.otherwise("/app/pages/user");
+        $urlRouterProvider.otherwise("/login/registration");
         //
         // Set up the states
         $stateProvider.state('app', {
@@ -158,10 +158,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             template: '<div ui-view class="fade-in-up"></div>'
         }).state('error.404', {
             url: '/404',
-            templateUrl: "assets/views/utility_404.html",
+            templateUrl: "/assets/views/utility_404.html",
         }).state('error.500', {
             url: '/500',
-            templateUrl: "assets/views/utility_500.html",
+            templateUrl: "/assets/views/utility_500.html",
         })
         // Login routes
         .state('login', {
@@ -173,7 +173,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             }
         }).state('login.signin', {
             url: '/signin',
-            templateUrl: "assets/views/login_login.html",
+            templateUrl: "/assets/views/login_login.html",
             controller: 'loginInterceptCtrl',
             resolve: loadSequence('loginInterceptCtrl'),
             params: {
@@ -181,13 +181,13 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             }
         }).state('login.forgot', {
             url: '/forgot',
-            templateUrl: "assets/views/login_forgot.html"
+            templateUrl: "/assets/views/login_forgot.html"
         }).state('login.registration', {
             url: '/registration',
-            templateUrl: "assets/views/login_registration.html"
+            templateUrl: "/assets/views/login_registration.html"
         }).state('login.lockscreen', {
             url: '/lock',
-            templateUrl: "assets/views/login_lock_screen.html"
+            templateUrl: "/assets/views/login_lock_screen.html"
         });
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
 
