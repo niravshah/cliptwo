@@ -33,7 +33,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
         // APPLICATION ROUTES
         // -----------------------------------
         // For any unmatched url, redirect to /app/dashboard
-        $urlRouterProvider.otherwise("/login/registration");
+        $urlRouterProvider.otherwise("/app/dashboard");
         //
         // Set up the states
         $stateProvider.state('app', {
@@ -54,7 +54,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             }
         }).state('app.pipeline', {
             url: "/pipeline",
-            templateUrl: "assets/views/pipeline.html",
+            templateUrl: "/assets/views/pipeline.html",
             title: 'Pipeline',
             resolve: loadSequence('pipelineCtrl', 'ngTagsInput', 'ngTable', 'pipelineDetailsCtrl'),
             ncyBreadcrumb: {

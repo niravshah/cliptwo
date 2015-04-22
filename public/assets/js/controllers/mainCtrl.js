@@ -2,9 +2,15 @@
 /**
  * Clip-Two Main Controller
  */
-app.controller('AppCtrl', ['$rootScope', '$scope', '$state', '$translate', '$localStorage', '$window', '$document', '$timeout', 'cfpLoadingBar',
-function ($rootScope, $scope, $state, $translate, $localStorage, $window, $document, $timeout, cfpLoadingBar) {
+app.controller('AppCtrl', ['$rootScope', '$scope', '$state', '$translate', '$localStorage', '$window', '$document', '$timeout', 'cfpLoadingBar', 'localStorageService', 'jwtHelper',
+function ($rootScope, $scope, $state, $translate, $localStorage, $window, $document, $timeout, cfpLoadingBar,localStorageService,jwtHelper) {
 
+	
+	$scope.init = function(token){
+		localStorageService.set('user.token',token);
+		console.log(jwtHelper.decodeToken(token));
+	}
+	
     // Loading bar transition
     // -----------------------------------
     var $win = $($window);

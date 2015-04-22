@@ -33,7 +33,7 @@
     <link rel="stylesheet" data-ng-href="/assets/css/themes/{{ app.layout.theme }}.css" />
 </head>
 
-<body ng-controller="AppCtrl">    
+<body ng-controller="AppCtrl" ng-init="init('<%=token%>')">    
     <div ui-view id="app" ng-class="{'app-mobile' : app.isMobile, 'app-navbar-fixed' : app.layout.isNavbarFixed, 'app-sidebar-fixed' : app.layout.isSidebarFixed, 'app-sidebar-closed':app.layout.isSidebarClosed, 'app-footer-fixed':app.layout.isFooterFixed}"></div>
 
     <!-- jQuery -->
@@ -97,9 +97,6 @@
     <!-- Clip-Two Controllers -->
     <script src="/assets/js/controllers/mainCtrl.js"></script>
     <script src="/assets/js/controllers/bootstrapCtrl.js"></script>
-
-    <!-- Google Apis -->
-    <script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather,visualization"></script>
 
     <!--Embedly -->
     <script src="http://cdn.embed.ly/jquery.embedly-3.1.1.min.js" type="text/javascript"></script>

@@ -10,6 +10,7 @@ router.get('/valid', function(req, res, next) {
 });
 router.get('/pipelines', function(req, res, next) {
     if(req.user) {
+		console.log(req.user);
         res.json({
             name: 'Java Passives',
             id: 'java-passives',

@@ -65,22 +65,12 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
+
 mongoose.connect('mongodb://localhost/test');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function(callback) {
     console.log('Successfully Connected to Local Mongo!');
 });
-var dSchema = mongoose.Schema({
-    uid: String,
-    pipelines: [],
-    content: []
-});
-var dModel = mongoose.model('dModel', dSchema);
-var USchema = mongoose.Schema({
-    uname: String,
-    email: String,
-    password: String
-});
-var UModel = mongoose.model('UModel', USchema);
+
 module.exports = app;
